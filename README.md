@@ -1,6 +1,6 @@
-# TCPlatformFix
+# CreativeSpectateFix
 
-A small client-side Fabric mod that fixes the first-person view on **TrainCarts' simulated platform POV**.
+A small client-side Fabric mod that aims to fix the first-person view on **TrainCarts' simulated platform POV**.
 
 This mod fixes the creative spectator issue found in TrainCarts' platform feature. It keeps the player's hand in the POV synced to mouse movement, instead of drifting away from the viewport.
 
