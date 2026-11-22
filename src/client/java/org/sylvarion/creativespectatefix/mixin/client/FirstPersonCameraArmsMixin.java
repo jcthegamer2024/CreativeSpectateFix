@@ -1,4 +1,4 @@
-package org.sylvarion.tcplatformfix.mixin.client;
+package org.sylvarion.creativespectatefix.mixin.client;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import net.minecraft.client.Minecraft;
@@ -16,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(FirstPersonHandsAndItemsRenderer.class)
 public abstract class FirstPersonCameraArmsMixin {
     @Inject(method = "submitHandsWithItems", at = @At("HEAD"))
-    private void tcplatformfix$useCameraAvatarForFirstPersonArms(
+    private void creativespectatefix$useCameraAvatarForFirstPersonArms(
             float partialTick,
             PoseStack poseStack,
             SubmitNodeCollector collector,

@@ -1,4 +1,4 @@
-package org.sylvarion.tcplatformfix.mixin.client;
+package org.sylvarion.creativespectatefix.mixin.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Hud;
@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(Hud.class)
 public abstract class HUDCameraPlayerMixin {
     @Inject(method = "getCameraPlayer", at = @At("RETURN"), cancellable = true)
-    private void tcplatformfix$showLocalPlayerHotbar(CallbackInfoReturnable<Player> cir) {
+    private void creativespectatefix$showLocalPlayerHotbar(CallbackInfoReturnable<Player> cir) {
         Minecraft minecraft = Minecraft.getInstance();
         Player cameraPlayer = cir.getReturnValue();
         Player local = minecraft.player;

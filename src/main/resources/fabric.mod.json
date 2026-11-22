@@ -1,29 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "tcplatformfix",
+  "id": "creativespectatefix",
   "version": "${version}",
-  "name": "TCPlatformFix",
-  "description": "",
+  "name": "CreativeSpectateFix",
+  "description": "Client-side camera and first-person compatibility for TrainCarts simulated platform views.",
   "authors": [],
   "contact": {},
   "license": "All-Rights-Reserved",
-  "icon": "assets/tcplatformfix/icon.png",
   "environment": "*",
   "entrypoints": {
     "fabric-datagen": [
-      "org.sylvarion.tcplatformfix.client.TcplatformfixDataGenerator"
+      "org.sylvarion.creativespectatefix.client.CreativeSpectateFixDataGenerator"
     ],
     "client": [
-      "org.sylvarion.tcplatformfix.client.TcplatformfixClient"
+      "org.sylvarion.creativespectatefix.client.CreativeSpectateFixClient"
     ],
     "main": [
-      "org.sylvarion.tcplatformfix.Tcplatformfix"
+      "org.sylvarion.creativespectatefix.CreativeSpectateFix"
     ]
   },
   "mixins": [
-    "tcplatformfix.mixins.json",
+    "creativespectatefix.mixins.json",
     {
-      "config": "tcplatformfix.client.mixins.json",
+      "config": "creativespectatefix.client.mixins.json",
       "environment": "client"
     }
   ],

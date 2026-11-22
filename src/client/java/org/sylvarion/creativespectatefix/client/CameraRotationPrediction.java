@@ -1,4 +1,4 @@
-package org.sylvarion.tcplatformfix.client;
+package org.sylvarion.creativespectatefix.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;

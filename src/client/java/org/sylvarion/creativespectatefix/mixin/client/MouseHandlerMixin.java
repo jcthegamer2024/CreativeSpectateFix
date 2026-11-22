@@ -1,4 +1,4 @@
-package org.sylvarion.tcplatformfix.mixin.client;
+package org.sylvarion.creativespectatefix.mixin.client;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.MouseHandler;
@@ -10,24 +10,24 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
-import org.sylvarion.tcplatformfix.client.CameraRotationPrediction;
+import org.sylvarion.creativespectatefix.client.CameraRotationPrediction;
 
 @Mixin(MouseHandler.class)
 public abstract class MouseHandlerMixin {
-    @Unique private float tcplatformfix$yawBeforeTurn;
-    @Unique private float tcplatformfix$pitchBeforeTurn;
+    @Unique private float creativespectatefix$yawBeforeTurn;
+    @Unique private float creativespectatefix$pitchBeforeTurn;
 
     @Inject(method = "turnPlayer", at = @At("HEAD"))
-    private void tcplatformfix$captureViewBeforeMouseTurn(double frameTime, CallbackInfo ci) {
+    private void creativespectatefix$captureViewBeforeMouseTurn(double frameTime, CallbackInfo ci) {
         LocalPlayer player = Minecraft.getInstance().player;
         if (player != null) {
-            this.tcplatformfix$yawBeforeTurn = player.getYRot();
-            this.tcplatformfix$pitchBeforeTurn = player.getXRot();
+            this.creativespectatefix$yawBeforeTurn = player.getYRot();
+            this.creativespectatefix$pitchBeforeTurn = player.getXRot();
         }
     }
 
     @Inject(method = "turnPlayer", at = @At("TAIL"))
-    private void tcplatformfix$predictSpectatedCameraRotation(double frameTime, CallbackInfo ci) {
+    private void creativespectatefix$predictSpectatedCameraRotation(double frameTime, CallbackInfo ci) {
         Minecraft minecraft = Minecraft.getInstance();
         LocalPlayer player = minecraft.player;
         Entity camera = minecraft.getCameraEntity();
@@ -36,8 +36,8 @@ public abstract class MouseHandlerMixin {
             return;
         }
 
-        float yawDelta = Mth.wrapDegrees(player.getYRot() - this.tcplatformfix$yawBeforeTurn);
-        float pitchDelta = player.getXRot() - this.tcplatformfix$pitchBeforeTurn;
+        float yawDelta = Mth.wrapDegrees(player.getYRot() - this.creativespectatefix$yawBeforeTurn);
+        float pitchDelta = player.getXRot() - this.creativespectatefix$pitchBeforeTurn;
         if (yawDelta != 0.0f || pitchDelta != 0.0f) {
             CameraRotationPrediction.addMouseDelta(camera, yawDelta, pitchDelta);
         }
