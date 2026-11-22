@@ -32,7 +32,6 @@ The mod is **client-side only**. Nothing needs to be installed on the server.
 ## Known issues
 
 - There is a small delay between moving the mouse and the camera responding. This comes from TrainCarts' server-driven camera updates.
-- Very fast mouse flicks can occasionally make the camera snap 180° the other way. This appears to come from TrainCarts' own rotation prediction, not from this mod.
 - Held-item sway is turned off while on the platform, so the hand stays locked to the view.
 
 ## Building
