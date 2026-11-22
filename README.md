@@ -26,7 +26,7 @@ The mod is **client-side only**. Nothing needs to be installed on the server.
 ## Installation
 
 1. Install Fabric Loader and Fabric API for Minecraft 26.3.
-2. Download the latest `tcplatformfix-<version>.jar` from the Releases page.
+2. Download the latest `creativespectatefix-<version>.jar` from the Releases page.
 3. Put the jar in your `mods` folder.
 
 ## Known issues
