@@ -1,0 +1,22 @@
+# Gradle
+.gradle/
+build/
+
+# Minecraft development runs and generated data
+run/
+logs/
+crash-reports/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Local machine configuration
+local.properties
+*.local
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini

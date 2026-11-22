@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "tcplatformfix",
+  "version": "${version}",
+  "name": "TCPlatformFix",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/tcplatformfix/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "org.sylvarion.tcplatformfix.client.TcplatformfixDataGenerator"
+    ],
+    "client": [
+      "org.sylvarion.tcplatformfix.client.TcplatformfixClient"
+    ],
+    "main": [
+      "org.sylvarion.tcplatformfix.Tcplatformfix"
+    ]
+  },
+  "mixins": [
+    "tcplatformfix.mixins.json",
+    {
+      "config": "tcplatformfix.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
