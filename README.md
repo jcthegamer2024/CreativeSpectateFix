@@ -48,4 +48,4 @@ Please open an issue and include your Minecraft version, TrainCarts version, and
 
 ## License
 
-Add your license here.
+MIT
